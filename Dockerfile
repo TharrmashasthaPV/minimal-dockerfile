@@ -14,7 +14,6 @@ RUN adduser --disabled-password \
     --gecos "Default user" \
     --uid ${NB_UID} \
     ${NB_USER} && \
-    apt-get install -f -y --no-install-recommends software-properties-common && \
     apt-get update && \
     apt-get install -f -y --no-install-recommends texlive-latex-base
 WORKDIR ${HOME}
