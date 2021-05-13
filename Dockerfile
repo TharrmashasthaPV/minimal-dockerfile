@@ -13,6 +13,9 @@ ENV HOME /home/${NB_USER}
 RUN adduser --disabled-password \
     --gecos "Default user" \
     --uid ${NB_UID} \
-    ${NB_USER}
+    ${NB_USER} && \
+    add-apt-repository ppa:jonathonf/texlive-2019 && \
+    apt-get update && \
+    apt-get install texlive
 WORKDIR ${HOME}
 USER ${USER}
