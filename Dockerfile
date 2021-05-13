@@ -14,7 +14,7 @@ RUN adduser --disabled-password \
     --gecos "Default user" \
     --uid ${NB_UID} \
     ${NB_USER} && \
-    apt-get install software-properties-common && \
+    apt-get install -f -y --no-install-recommends software-properties-common && \
     apt-get update && \
     add-apt-repository ppa:jonathonf/texlive-2019 && \
     apt-get update && \
