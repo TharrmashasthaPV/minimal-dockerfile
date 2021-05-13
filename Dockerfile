@@ -16,6 +16,6 @@ RUN adduser --disabled-password \
     ${NB_USER} && \
     apt-get install -f -y --no-install-recommends software-properties-common && \
     apt-get update && \
-    apt-get install texlive-latex-base
+    apt-get install -f -y --no-install-recommends texlive-latex-base
 WORKDIR ${HOME}
 USER ${USER}
