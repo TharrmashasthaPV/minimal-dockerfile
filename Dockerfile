@@ -16,8 +16,6 @@ RUN adduser --disabled-password \
     ${NB_USER} && \
     apt-get install -f -y --no-install-recommends software-properties-common && \
     apt-get update && \
-    add-apt-repository ppa:jonathonf/texlive-2019 && \
-    apt-get update && \
-    apt-get install texlive
+    apt-get install texlive-latex-base
 WORKDIR ${HOME}
 USER ${USER}
