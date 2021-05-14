@@ -16,6 +16,7 @@ RUN adduser --disabled-password \
     ${NB_USER} && \
     apt-get update && \
     apt-get install -f -y --no-install-recommends texlive-latex-base && \
-    apt-get install -f -y texlive-pictures
+    apt-get install -f -y texlive-pictures && \
+    apt-get install -r -y vim
 WORKDIR ${HOME}
 USER ${USER}
